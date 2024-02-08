@@ -1,5 +1,6 @@
-package com.dezzy.springboot;
+package com.dezzy.springboot.school;
 
+import com.dezzy.springboot.student.Student;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,5 +1,7 @@
-package com.dezzy.springboot;
+package com.dezzy.springboot.student;
 
+import com.dezzy.springboot.school.School;
+import com.dezzy.springboot.studentprofile.Profile;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

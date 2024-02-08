@@ -1,5 +1,6 @@
-package com.dezzy.springboot;
+package com.dezzy.springboot.studentprofile;
 
+import com.dezzy.springboot.student.Student;
 import jakarta.persistence.*;
 
 @Entity

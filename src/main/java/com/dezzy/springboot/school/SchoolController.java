@@ -1,4 +1,4 @@
-package com.dezzy.springboot;
+package com.dezzy.springboot.school;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,21 +9,21 @@ import java.util.List;
 
 @RestController
 public class SchoolController {
+    private final SchoolService schoolService;
 
-    private final SchoolRepository schoolRepository;
-
-    public SchoolController(SchoolRepository schoolRepository) {
-        this.schoolRepository = schoolRepository;
+    public SchoolController(SchoolService schoolService) {
+        this.schoolService = schoolService;
     }
 
     @PostMapping("/schools")
-    public School create(
-            @RequestBody School school
+    public SchoolDto create(
+            @RequestBody SchoolDto dto
     ){
-         return schoolRepository.save(school);
+        return this.schoolService.createSchool(dto);
     }
+
     @GetMapping("/schools")
-    public List<School> findAll(){
-         return schoolRepository.findAll();
+    public List<SchoolDto> findAll(){
+         return this.schoolService.findAllSchools();
     }
 }

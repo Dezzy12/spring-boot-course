@@ -1,4 +1,4 @@
-package com.dezzy.springboot;
+package com.dezzy.springboot.student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
